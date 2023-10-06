@@ -1,0 +1,525 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.subheader {
+  background-color: #9C3060;
+  color: #fff;
+  padding: 0.5rem
+}
+
+.subheader > span {
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 4rem;
+}
+
+header > img {
+  width: 102px;
+}
+
+.navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.navegacao ul li {
+  position: relative;
+}
+
+.navegacao ul li a,
+.navegacao ul li span {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  cursor: pointer
+}
+
+.cursos-dropdown {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 200px;
+  text-align: left;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  z-index: 100;
+  border-radius: 15px;
+  box-shadow: -21px 22px 16px -7px rgba(0,0,0,0.5);
+}
+
+#cursos-dropdown-btn:hover .cursos-dropdown {
+  display: block;
+}
+
+
+.seletivos-dropdown {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 200px;
+  text-align: left;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  z-index: 100;
+  border-radius: 15px;
+  box-shadow: -21px 22px 16px -7px rgba(0,0,0,0.5);
+}
+
+#seletivos-dropdown-btn:hover .seletivos-dropdown {
+  display: block;
+}
+
+.cursos-dropdown a:hover, 
+.cursos-dropdown a:focus {
+  color: #9C3060;
+  font-weight: 600;
+}
+
+.seletivos-dropdown a:hover, 
+.seletivos-dropdown a:focus {
+  color: #9C3060;
+  font-weight: 600;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 90vh;
+  background-color: #a2a2a2;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+.hero-section span {
+  color: #FFF;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+
+  position: absolute;
+  bottom: 250px;
+  left: 100px;
+}
+
+.hero-section button {
+  position: absolute;
+  bottom: 150px;
+  left: 100px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  height: 3rem;
+
+  border: none;
+  border-radius: 25px;
+
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+  background-color: #9C3060;
+  color: #fff;
+
+  transition: all 0.5s ease;
+}
+
+.hero-section button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+  box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+}
+
+.cursos-graduacao {
+  padding: 1.5rem;
+  height: 500px;
+}
+
+h2 {
+  color: #3E005B;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.84px;
+}
+
+.cursos-graduacao h2 {
+  margin-bottom: 60px;
+  
+}
+
+.cursos-wrapper {
+  max-height: 600px;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cursos-wrapper-seletores ul {
+  list-style: none;
+  text-align: left;
+
+}
+
+.link-curso{
+  color: #9C3060;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  text-decoration-line: underline;
+  margin-bottom: 0.4rem;
+}
+
+.link-curso:hover {
+  cursor: pointer;
+  font-weight: 700;
+  scale: 1.2;
+  
+  transition: all 0.5s ease;
+}
+
+/* .link-curso::before {
+  content: '';
+  background: url('imgs/bala0-icev.png')no-repeat center center/cover;
+  position: absolute; 
+  opacity: 0.3; 
+  top: 0px; 
+  left: 0px; 
+  width: 100vw; 
+  height: 100vh; 
+  z-index: -1; 
+  
+  
+} */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.cursos {
+  max-height: 400px;
+  overflow-y: scroll;
+  min-width: 500px;
+}
+
+.cursos span {
+  color: #FF2B55;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+table {
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+
+table td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+
+}
+
+.cursos a {
+  
+  padding: 10px 60px;
+
+  border: none;
+  border-radius: 25px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+
+  background-color: #9C3060;
+  color: #fff;
+
+  transition: all 0.5s ease;
+}
+
+.cursos a:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+  box-shadow: -9px 10px 22px -10px rgba(0,0,0,0.75);
+}
+
+/* Estilização da Scrollbar dos cursos */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9C3060; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9C3060; 
+}
+
+
+
+.cards-diferenciais {
+  margin-top: 100px;
+  background-color: red;
+  padding-top: 4rem;
+  background: url("https://rubeusarquivos.apprbs.com.br/file/icev/CanalPersonalizado/259/7Dl-2023-09-29-15-17-32.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.cards-diferenciais span {
+  text-transform: uppercase;
+  color: #FF2B55;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+}
+
+.cards-diferenciais h1 {
+  margin-top: 30px;
+  
+  color: #FFF;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.25rem; /* 45% */
+  letter-spacing: -0.075rem;
+}
+
+.card-carousel {
+  margin-top: 100px;
+  display: flex;
+
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  width: 20rem;
+  height: 30rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  border-radius: 0.99588rem;
+  background: #482A52;
+  box-shadow: 9.95889px 3.98356px 39.83555px 0px rgba(0, 0, 0, 0.16);
+}
+
+.cards-diferenciais img {
+  height: 120px;
+}
+
+.card h4 {
+  color: #FFF;
+  font-family: Montserrat;
+
+}
+
+.card p {
+  color: #FFF;
+}
+
+.coordenadores {
+  margin-top: 100px;
+}
+
+.wrapper-coord {
+  margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 150px;
+}
+
+.card-coord {
+  display: flex;
+  padding: 2.5rem 1.5rem;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 2rem;
+  border: 2px solid #9C3060;
+}
+
+.card-coord img {
+  height: 150px;
+}
+
+.card-coord span {
+  color: #3E005B;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 2.25rem */
+}
+
+.empresas-parceiras {
+  background: #E5E5E5;
+  padding: 50px;
+  min-height: 900px;
+}
+
+.empresas-parceiras span {
+  color: #FF2B55;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+
+}
+
+.empresas-parceiras h2 {
+  margin-top: 30px;
+}
+
+.testemonials {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.wrapper-cards-alunos {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 50px
+}
+
+.card-aluno{
+  border: 1px solid #dedede;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  gap: 1.4rem;
+  position:relative;
+}
+
+
+
+.aluno-img {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.nome-aluno {
+  color:  #2091F9;
+  font-family: Montserrat;
+  font-size: 1.13188rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.94031rem; /* 171.429% */
+  letter-spacing: 0.01619rem;
+}
+
+.links {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 30px;
+}
+
+.links img {
+
+}
+
+.links a {
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.04rem;
+}
+
+hr {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.redes-sociais {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
